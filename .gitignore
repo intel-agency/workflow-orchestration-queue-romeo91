@@ -424,3 +424,20 @@ docker/validation/logs/
 docker/validation/results.jsonl
 docker/.env
 models.json
+
+# ── Python / uv ─────────────────────────────────────────────────
+.venv/
+*.egg-info/
+dist/
+build/
+.uv/
+uv.lock
+
+# OS-APOW logs
+osapow.log
+sentinel.log
+worker_run_*.jsonl
+
+# Coverage
+htmlcov/
+.coverage
