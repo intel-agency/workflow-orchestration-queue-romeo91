@@ -1,5 +1,5 @@
 {
-  "name": "workflow-orchestration-queue-romeo91",
+  "name": "workflow-orchestration-queue-romeo91-devcontainer",
   "image": "ghcr.io/intel-agency/workflow-orchestration-queue-romeo91/devcontainer:main-latest",
   "containerEnv": {
     "DOTNET_ROOT": "/usr/share/dotnet"
