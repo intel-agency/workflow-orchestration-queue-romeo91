@@ -15,11 +15,10 @@ This document records deviations from the standard `init-existing-repository` as
 
 ---
 
-## Deviation 002: GitHub Project Creation — Insufficient Permissions
+## Deviation 002: GitHub Project Creation — Initially Blocked, Resolved via PAT
 
 - **Step**: Step 3 — Create GitHub Project for Issue Tracking
 - **Date**: 2026-04-27
-- **Status**: SKIPPED
-- **Reason**: The `GITHUB_TOKEN` used by `github-actions[bot]` does not have the `project` permission scope required to create organization projects (`createProjectV2`). The error was: `github-actions[bot] does not have permission to create projects on ownerId O_kgDODTEhMw`.
-- **Impact**: No GitHub Project (board) will be created for issue tracking.
-- **Action Required**: Create the project manually at https://github.com/orgs/intel-agency/projects with columns: Not Started, In Progress, In Review, Done. Alternatively, use a Personal Access Token with `project` scope in the workflow.
+- **Status**: RESOLVED
+- **Initial Issue**: The `GITHUB_TOKEN` used by `github-actions[bot]` does not have the `project` permission scope required to create organization projects (`createProjectV2`).
+- **Resolution**: Used `GH_ORCHESTRATION_AGENT_TOKEN` PAT (with `project` scope) to create the project. Project ID 80 (`workflow-orchestration-queue-romeo91`) was created, linked to the repository, and configured with columns: Not Started, In Progress, In Review, Done.
